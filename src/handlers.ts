@@ -5,7 +5,7 @@ import * as dictionary from './system.i18n'
 export const runAppHandler: SaluteHandler = ({ res, req }) => {
     const keyset = req.i18n(dictionary)
     res.appendBubble(keyset('start'))
-    res.appendSuggestions(['Хватит'])
+    res.appendSuggestions(['Первый', 'Хватит'])
 }
 
 //Хэндлер для NoMatch
@@ -25,5 +25,11 @@ export const HelpHandler: SaluteHandler = ({res, req}) => {
 export const FirstStateHandler: SaluteHandler = ({res, req}) => {
     const keyset = req.i18n(dictionary);
     res.appendBubble(keyset('first'));
+    res.appendSuggestions(['Второй'])
+}
+
+export const SecondStateHandler: SaluteHandler = ({res, req}) => {
+    const keyset = req.i18n(dictionary);
+    res.appendBubble(keyset('second'));
     res.appendSuggestions(['Второй'])
 }

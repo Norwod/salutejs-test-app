@@ -35,6 +35,15 @@
         }
       ],
       "variables": {}
+    },
+    "/second": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "второй"
+        }
+      ],
+      "variables": {}
     }
   },
   "entities": {}
