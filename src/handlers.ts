@@ -21,3 +21,9 @@ export const HelpHandler: SaluteHandler = ({res, req}) => {
     res.appendBubble(keyset('help'))
     res.appendSuggestions(['Хватит'])
 }
+
+export const FirstStateHandler: SaluteHandler = ({res, req}) => {
+    const keyset = req.i18n(dictionary);
+    res.appendBubble(keyset('first'));
+    res.appendSuggestions(['Второй'])
+}

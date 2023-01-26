@@ -1,6 +1,6 @@
 import {
     runAppHandler,
-    noMatchHandler, HelpHandler
+    noMatchHandler, HelpHandler, FirstStateHandler
 } from './handlers';
 import { createSaluteRequest, createSaluteResponse, createScenarioWalker, createSystemScenario, createUserScenario, NLPRequest, NLPResponse, SaluteRequest, createIntents, createMatchers } from '@salutejs/scenario'
 import { SaluteMemoryStorage } from '@salutejs/storage-adapter-memory'
@@ -14,6 +14,10 @@ const userScenario = createUserScenario({
     help: {
         match: intent('/Help'),
         handle: HelpHandler
+    },
+    first: {
+        match: intent('/first'),
+        handle: FirstStateHandler
     }
 })
 

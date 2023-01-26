@@ -26,6 +26,15 @@
         }
       ],
       "variables": {}
+    },
+    "/first": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "первый"
+        }
+      ],
+      "variables": {}
     }
   },
   "entities": {}
