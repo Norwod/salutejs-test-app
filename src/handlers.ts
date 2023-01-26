@@ -12,7 +12,7 @@ export const runAppHandler: SaluteHandler = ({ res, req }) => {
 export const noMatchHandler: SaluteHandler = ({ res , req}) => {
     const keyset = req.i18n(dictionary)
     res.appendBubble(keyset('nomatch'))
-    res.appendSuggestions(['Хватит'])
+    res.appendSuggestions(['Первый', 'Хватит'])
     }
 
     //Хэндлер для Помощь
