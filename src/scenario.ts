@@ -1,6 +1,6 @@
 import {
     runAppHandler,
-    noMatchHandler, HelpHandler, FirstStateHandler, SecondStateHandler, ReceiptStateHandler, SecondStepHandler
+    noMatchHandler, HelpHandler, FirstStateHandler, SecondStateHandler, ReceiptStateHandler, SecondStepHandler, ThirdStepHandler
 } from './handlers';
 import { createSaluteRequest, createSaluteResponse, createScenarioWalker, createSystemScenario, createUserScenario, NLPRequest, NLPResponse, SaluteRequest, createIntents, createMatchers } from '@salutejs/scenario'
 import { SaluteMemoryStorage } from '@salutejs/storage-adapter-memory'
@@ -14,6 +14,10 @@ const userScenario = createUserScenario({
     help: {
         match: intent('/Help'),
         handle: HelpHandler
+    },   
+    receipt: {
+        match: intent('/рецепт'),
+        handle: ReceiptStateHandler
     },
     first: {
         match: intent('/first'),
@@ -23,10 +27,10 @@ const userScenario = createUserScenario({
         match: text('Второй шаг'),
         handle: SecondStepHandler
     },
-    receipt: {
-        match: intent('/рецепт'),
-        handle: ReceiptStateHandler
-    }
+    third: {
+        match: text('Третий шаг'),
+        handle: ThirdStepHandler
+    },
 })
 
 const systemScenario = createSystemScenario({
