@@ -8,7 +8,7 @@ import { SmartAppBrainRecognizer } from '@salutejs/recognizer-smartapp-brain'
 import model from './intents.json'
 
 const intents = createIntents(model.intents)
-const { intent, action, regexp } = createMatchers<SaluteRequest, typeof intents>();
+const { intent, text, action, regexp } = createMatchers<SaluteRequest, typeof intents>();
 
 const userScenario = createUserScenario({
     help: {
@@ -20,7 +20,7 @@ const userScenario = createUserScenario({
         handle: FirstStateHandler
     },
     second: {
-        match: intent('/second'),
+        match: text('Второй шаг'),
         handle: SecondStateHandler
     },
     receipt: {
