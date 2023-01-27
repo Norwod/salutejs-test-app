@@ -30,6 +30,6 @@ export const FirstStateHandler: SaluteHandler = ({res, req}) => {
 
 export const SecondStateHandler: SaluteHandler = ({res, req}) => {
     const keyset = req.i18n(dictionary);
-    res.appendBubble(keyset('second'));
+    res.appendBubble('Второй экран');
     res.appendSuggestions(['Второй'])
 }
