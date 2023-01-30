@@ -59,6 +59,7 @@ export const imageCard = (): GalleryCard => {
                 type: 'media_gallery_item',
                 image: {
                     url: "https://cdn1.ozone.ru/multimedia/wc1200/1019658022.jpg",
+                    hash: 'b74f46f135f2bb415b6cd638f5522931',
                     size: {
                         width: 'small',
                         aspect_ratio: 1,

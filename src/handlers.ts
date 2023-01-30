@@ -27,6 +27,7 @@ export const HelpHandler: SaluteHandler = ({ res, req }) => {
 export const FirstStateHandler: SaluteHandler = ({ res, req }) => {
     const keyset = req.i18n(dictionary);
     res.appendBubble(keyset('first'));
+    res.appendCard(imageCard())
     res.appendSuggestions(['Второй'])
 }
 
