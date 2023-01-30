@@ -66,13 +66,19 @@ export const imageCard = (): GalleryCard => {
                     },
                 },
                 bottom_text: {
-                    text: `Title`,
+                    text: `bottom Title`,
                     typeface: 'caption',
                     text_color: 'secondary',
                     max_lines: 1,
                     margins: {
                         top: '2x',
                     },
+                },
+                top_text: {
+                    text: "Top title",
+                    typeface: 'footnote1',
+                    text_color: 'default',
+                    max_lines: 2,
                 },               
             }
 
