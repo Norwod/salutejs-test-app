@@ -49,3 +49,32 @@ export const createOrderBundle = (): ListCard => {
         ],
     };
 };
+
+
+export const imageCard = (): GalleryCard => {
+    return {
+        type: 'gallery_card',              
+        items: [
+            {
+                type: 'media_gallery_item',
+                image: {
+                    url: "https://cdn1.ozone.ru/multimedia/wc1200/1019658022.jpg",
+                    size: {
+                        width: 'small',
+                        aspect_ratio: 1,
+                    },
+                },
+                bottom_text: {
+                    text: `Title`,
+                    typeface: 'caption',
+                    text_color: 'secondary',
+                    max_lines: 1,
+                    margins: {
+                        top: '2x',
+                    },
+                },               
+            }
+
+        ]  
+    };
+};

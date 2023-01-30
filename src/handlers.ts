@@ -1,7 +1,7 @@
 import { SaluteHandler } from '@salutejs/scenario'
 import { GalleryCard, GalleryItem, LeftRightCellView, ListCard, PaymentInvoice } from '@salutejs/scenario';
 import * as dictionary from './system.i18n'
-import { createOrderBundle } from './card'
+import { createOrderBundle, imageCard } from './card'
 
 //Хэндлер для RUN_APP
 export const runAppHandler: SaluteHandler = ({ res, req }) => {
@@ -64,6 +64,7 @@ export const FourthStepHandler: SaluteHandler = ({ res, req }) => {
 
 export const FivethStepHandler: SaluteHandler = ({ res, req }) => {
     const keyset = req.i18n(dictionary);
+    res.appendCard(imageCard())
     res.appendBubble('Прессованные дрожжи можно добавлять прямо в емкость, предварительно размяв чистыми руками. Но всё же лучше сначала растворить брикет в небольшом количестве приготовленного сусла (воды и сахара), накрыть крышкой и подождать до появления пены. Обычно на всё уходит 5-10 минут.');
     res.appendSuggestions(['Шестой шаг'])
 }
