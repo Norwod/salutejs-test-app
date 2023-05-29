@@ -1,7 +1,7 @@
 import { SaluteHandler } from '@salutejs/scenario'
 import { GalleryCard, GalleryItem, LeftRightCellView, ListCard, PaymentInvoice } from '@salutejs/scenario';
 import * as dictionary from './system.i18n'
-import { createOrderBundle, imageCard } from './card'
+import { createOrderBundle, imageCard, imageCardTest } from './card'
 
 //Хэндлер для RUN_APP
 export const runAppHandler: SaluteHandler = ({ res, req }) => {
@@ -47,6 +47,7 @@ export const ReceiptStateHandler: SaluteHandler = ({ res, req }) => {
 export const SecondStepHandler: SaluteHandler = ({ res, req }) => {
     const keyset = req.i18n(dictionary);
     res.appendCard(imageCard())
+    res.appendCard(imageCardTest())
     res.appendBubble('Под весьма сложным названием понимается приготовление обычного сахарного сиропа с лимонной кислотой. Дело в том, что во время брожения дрожжи сначала расщепляют сахар на простые моносахариды – глюкозу с фруктозой, и только потом перерабатывают эти вещества в спирт. Нагревание также убивает патогенные микроорганизмы на поверхности сахара, которые ждут более благоприятных условий для размножения (температуры и влажности). Активизация вредных микробов в браге нежелательна, поскольку может негативно отразиться на запахе.');
     res.appendSuggestions(['Третий шаг'])
     // res.appendCard(createOrderBundle());
