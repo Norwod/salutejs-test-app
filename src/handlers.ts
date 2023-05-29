@@ -39,6 +39,8 @@ export const SecondStateHandler: SaluteHandler = ({ res, req }) => {
 
 export const ReceiptStateHandler: SaluteHandler = ({ res, req }) => {
     const keyset = req.i18n(dictionary);
+    res.appendCard(imageCard())
+    res.appendCard(imageCardTest())
     res.appendBubble('Рецепт приотовления самогона');
     res.appendBubble('Сначала определимся с количеством самогона, который нужен на выходе. В домашних условиях из 1 кг сахара получается 1,1-1,2 литра самогонки крепостью 40 градусов. Но при расчетах советую увеличивать количество ингредиентов на 10-15%, так как в силу разных причин (температуры, качества сырья, неправильной перегонки) реальный выход всегда меньше теоретического именно на эту величину.')
     res.appendSuggestions(['Второй шаг'])
