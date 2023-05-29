@@ -58,8 +58,8 @@ export const imageCard = (): GalleryCard => {
             {
                 type: 'media_gallery_item',
                 image: {
-                    url: "https://cdn1.ozone.ru/multimedia/wc1200/1019658022.jpg",
-                    hash: 'b74f46f135f2bb415b6cd638f5522931',
+                    url: "https://content.sberdevices.ru/smartmarket-smide-prod/94853/94854/wbIuwqNzvz06zLZH.png",
+                    hash: '98d8b98f09389e7cb01c31d76a686dd1',
                     size: {
                         width: 'small',
                         aspect_ratio: 1,
@@ -93,8 +93,8 @@ export const imageCardTest = (): GalleryCard => {
             {
                 type: 'media_gallery_item',
                 image: {
-                    url: "https://cdn1.ozone.ru/multimedia/wc1200/1019658022.jpg",
-                    hash: 'b74f46f135f2bb415b6cd638f5522931',
+                    url: "https://content.sberdevices.ru/smartmarket-smide-prod/94853/94854/wbIuwqNzvz06zLZH.png",
+                    hash: '98d8b98f09389e7cb01c31d76a686dd1',
                     size: {
                         width: 'small',
                         aspect_ratio: 1,
